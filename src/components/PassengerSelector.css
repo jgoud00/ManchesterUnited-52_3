@@ -1,0 +1,156 @@
+.pax-selector {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pax-selector__trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 52px;
+  padding: 0 14px;
+  background: #fff;
+  border: 1.5px solid var(--cloud-100);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  color: var(--navy-900);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: border-color 0.15s ease;
+}
+
+.pax-selector__trigger:hover {
+  border-color: var(--slate-300);
+}
+
+.pax-selector__cabin-tag {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--amber-600);
+  background: #fdf1de;
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.pax-selector__panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  width: 280px;
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-pop);
+  border: 1px solid var(--cloud-100);
+  z-index: 40;
+  padding: 14px;
+  animation: airportPanelIn 0.14s ease;
+}
+
+.pax-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.pax-row__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy-900);
+}
+
+.pax-row__sub {
+  font-size: 11.5px;
+  color: var(--slate-500);
+}
+
+.pax-row__controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pax-row__controls span {
+  width: 16px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.pax-row__controls button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid var(--cloud-100);
+  background: #fff;
+  color: var(--navy-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pax-row__controls button:hover:not(:disabled) {
+  border-color: var(--amber-500);
+  color: var(--amber-600);
+}
+
+.pax-row__controls button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.pax-selector__divider {
+  height: 1px;
+  background: var(--cloud-100);
+  margin: 8px 0 12px;
+}
+
+.pax-selector__cabins {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.pax-selector__cabin {
+  flex: 1;
+  min-width: 80px;
+  padding: 8px 6px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--cloud-100);
+  background: #fff;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--slate-500);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pax-selector__cabin.is-active {
+  border-color: var(--navy-900);
+  background: var(--navy-900);
+  color: #fff;
+}
+
+.pax-selector__done {
+  width: 100%;
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--amber-500);
+  color: var(--navy-950);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.pax-selector__done:hover {
+  background: var(--amber-400);
+}

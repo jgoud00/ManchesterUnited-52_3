@@ -1,0 +1,11 @@
+.split-flap {
+  display: inline-flex;
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.split-flap__char {
+  display: inline-block;
+  min-width: 0.62em;
+  text-align: center;
+}

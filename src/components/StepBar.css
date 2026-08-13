@@ -1,0 +1,67 @@
+.step-bar {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.step-bar__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.step-bar__dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  border: 1.5px solid var(--cloud-100);
+  color: var(--slate-300);
+  background: #fff;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.step-bar__item--done .step-bar__dot {
+  background: var(--green-600);
+  border-color: var(--green-600);
+  color: #fff;
+}
+
+.step-bar__item--current .step-bar__dot {
+  background: var(--amber-500);
+  border-color: var(--amber-500);
+  color: var(--navy-950);
+}
+
+.step-bar__label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--slate-300);
+  white-space: nowrap;
+}
+
+.step-bar__item--current .step-bar__label,
+.step-bar__item--done .step-bar__label {
+  color: var(--navy-900);
+}
+
+.step-bar__connector {
+  width: 28px;
+  height: 1.5px;
+  background: var(--cloud-100);
+  margin: 0 10px;
+}
+
+.step-bar__item--done .step-bar__connector {
+  background: var(--green-600);
+}
